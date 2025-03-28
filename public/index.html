@@ -7,31 +7,48 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <div class="navbar">
-      <h1>Book My Show</h1>
+ 
+    <header>
       <nav>
-        <a href="#movies">Movies</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <div class="nav-container">
+          <!-- Logo -->
+
+          <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          
+          <!-- Search Bar -->
+          <div class="search-bar">
+            <img src="/images/logo.png" alt="Logo" class="search-logo"> <!-- Add logo here -->
+            <input type="text" id="search-input" placeholder="Search for movies...">
+            <button id="search-button">Search</button>
+            <div id="search-dropdown" class="dropdown"></div>
+          </div>          
+        </div>
       </nav>
-    </div>
-  </header>
-  <main>
-    <section id="search">
-      <div class="search-bar">
-        <img src="/images/logo.png" alt="BookMyShow Logo" class="search-logo">
-        <input type="text" id="search-input" placeholder="Search for movies..." autocomplete="off">
-        <button id="search-button">Search</button>
-        <div class="dropdown" id="search-dropdown"></div>
-      </div>
-    </section>
+    </header>
+    <main>
     <section id="movies">
       <h2>Available Movies</h2>
       <div class="movies-container" id="movies-container">
         <!-- Movie cards will be dynamically added here -->
       </div>
+      <div class="premium-filter">
+        <label class="switch">
+          <input type="checkbox" id="premium-checkbox">
+          <span class="slider"></span>
+        </label>
+        <span id="premium-label">Show Premium Movies Only</span>
+      </div>
+      
+      <div id="movies-container"></div>
+      
+      
     </section>
+    <button id="reset-button">Reset</button>
+
   </main>
   <footer id="about">
     <p>© 2025 Book My Show | Designed with ❤️</p>
